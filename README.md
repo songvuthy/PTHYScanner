@@ -22,7 +22,7 @@ pod 'PTHYScanner'
 
 ## Author
 
-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, songvuthy93@gmail.com
+  Song Vuthy, songvuthy93@gmail.com
 
 ## License
 
