@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23F24DDECBD3BB340EB4BE86E28B6BCA /* PTHYScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6089C33967AD3C25D49C43A6248BA99E /* PTHYScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		264097D4A1D9E6210C8C14DD5D3F70FC /* Pods-PTHYScanner_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9F1018A212F0C8A44A11CEE8E78A3 /* Pods-PTHYScanner_Tests-dummy.m */; };
+		4B230F01F694836FBF25DDDE9F8B9667 /* Pods-PTHYScanner_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DB44EE6C4450F0E07CDF7149686AB2B /* Pods-PTHYScanner_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E1D6847B6BED6131D9A619E12E018C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		833A40ECCB72249CBC05CF1072137070 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878E2BDB4AAAFB1C2768D9DB952AF12B /* ReplaceMe.swift */; };
+		8D0A2DF34A866CB4D27172D5507649D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9E461F713257006D1D14822E4F360C7A /* PTHYScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA55132F428F5E1F844593DBBBC8B60 /* PTHYScanner-dummy.m */; };
+		CD9926534F2CF6382398925D00650BDB /* Pods-PTHYScanner_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F860B07F2BFF116BCAAEFF197A10471 /* Pods-PTHYScanner_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDAC0BCBDDE43ECA917D6A9B08F2EFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D20E60827B10653397FE67A6133D504D /* Pods-PTHYScanner_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2DF0CF60467A1A8FC6C60C74A5319C /* Pods-PTHYScanner_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B72E11A76A148CD88C24A70BB44C721 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C8207B38E0F46A0677080F6C9472C17;
+			remoteInfo = PTHYScanner;
+		};
+		939DB2BA6DBFEB103D251D58E87EADFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9E20EA84737FEB9459FAD7903B01FE6;
+			remoteInfo = "Pods-PTHYScanner_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C679A9FD3282BAEC5A300AB29935C33 /* PTHYScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PTHYScanner.modulemap; sourceTree = "<group>"; };
+		1DB44EE6C4450F0E07CDF7149686AB2B /* Pods-PTHYScanner_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PTHYScanner_Tests-umbrella.h"; sourceTree = "<group>"; };
+		284A7E980362E1201E0441F8112ADEA9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B4D147935100EE84FA404CCB0CBD36D /* Pods-PTHYScanner_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PTHYScanner_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		35B6E0FF593E83FD48CDD6AB4F8CDFD9 /* Pods-PTHYScanner_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PTHYScanner_Example-Info.plist"; sourceTree = "<group>"; };
+		4427206CE7A48C15EC0016E07369638D /* Pods-PTHYScanner_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PTHYScanner_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49F802CF0A6AC58278F3E5A346D7BC06 /* PTHYScanner */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PTHYScanner; path = PTHYScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2DF0CF60467A1A8FC6C60C74A5319C /* Pods-PTHYScanner_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PTHYScanner_Example-dummy.m"; sourceTree = "<group>"; };
+		56B195E23C09281A6769E83EF4644AD8 /* Pods-PTHYScanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PTHYScanner_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5A49D6E9F6E24236F0B72CD5413D7368 /* Pods-PTHYScanner_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PTHYScanner_Tests"; path = Pods_PTHYScanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC194D4E96D9B0125712D18755B4A6B /* PTHYScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PTHYScanner-Info.plist"; sourceTree = "<group>"; };
+		5F860B07F2BFF116BCAAEFF197A10471 /* Pods-PTHYScanner_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PTHYScanner_Example-umbrella.h"; sourceTree = "<group>"; };
+		6089C33967AD3C25D49C43A6248BA99E /* PTHYScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PTHYScanner-umbrella.h"; sourceTree = "<group>"; };
+		6173ACA0047FB5CF671927C454138241 /* Pods-PTHYScanner_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PTHYScanner_Tests.modulemap"; sourceTree = "<group>"; };
+		6571BAA2D0699A87C715A183D0533F4E /* Pods-PTHYScanner_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PTHYScanner_Example"; path = Pods_PTHYScanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		857260E1AD43CAE982CC1B380DFCDF86 /* Pods-PTHYScanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PTHYScanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		878E2BDB4AAAFB1C2768D9DB952AF12B /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = PTHYScanner/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		93A9435C796433C0EED0560F264EBCC8 /* PTHYScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PTHYScanner.release.xcconfig; sourceTree = "<group>"; };
+		9448E92D077C90E42E5CA5D5F281FADE /* Pods-PTHYScanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PTHYScanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		96CA47ED2A8159FA4391F20094D067CF /* PTHYScanner.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PTHYScanner.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		9D2966BDF77450DEBD6AF5A4C1ED03B9 /* PTHYScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PTHYScanner.debug.xcconfig; sourceTree = "<group>"; };
+		9D7DB08B516E3ACCDD8CC6B6E3EA7342 /* Pods-PTHYScanner_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PTHYScanner_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA49C74B4D8619592BAE83BF4EABD58F /* Pods-PTHYScanner_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PTHYScanner_Example.modulemap"; sourceTree = "<group>"; };
+		D6747AB4060302561E5361C0A5700B8B /* Pods-PTHYScanner_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PTHYScanner_Example-frameworks.sh"; sourceTree = "<group>"; };
+		DBC9F1018A212F0C8A44A11CEE8E78A3 /* Pods-PTHYScanner_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PTHYScanner_Tests-dummy.m"; sourceTree = "<group>"; };
+		DDCAE5C8BD6F05679CFD42A65B59A3B7 /* PTHYScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PTHYScanner-prefix.pch"; sourceTree = "<group>"; };
+		DFA55132F428F5E1F844593DBBBC8B60 /* PTHYScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PTHYScanner-dummy.m"; sourceTree = "<group>"; };
+		E87F58CBCFE3460F36E1ACC88670F7E9 /* Pods-PTHYScanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PTHYScanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F1C22892D5A91E5E6454239C9AEB8C02 /* Pods-PTHYScanner_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PTHYScanner_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F2D58D122A2D1B8DB5C31143EC8F8BA7 /* Pods-PTHYScanner_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PTHYScanner_Tests-Info.plist"; sourceTree = "<group>"; };
+		F8DBCA080FB0CFB624DF8F2E8EC6DBD7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EC40DBCCBD3FA6D1CA9002E80004E9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDAC0BCBDDE43ECA917D6A9B08F2EFDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8A428812B93DA96615AD8A11FF99C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1D6847B6BED6131D9A619E12E018C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF55CB01AC0BFBB918B9F3E52B80368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0A2DF34A866CB4D27172D5507649D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C310D395A3B1EE98F9D35A3B10E7025 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C679A9FD3282BAEC5A300AB29935C33 /* PTHYScanner.modulemap */,
+				DFA55132F428F5E1F844593DBBBC8B60 /* PTHYScanner-dummy.m */,
+				5DC194D4E96D9B0125712D18755B4A6B /* PTHYScanner-Info.plist */,
+				DDCAE5C8BD6F05679CFD42A65B59A3B7 /* PTHYScanner-prefix.pch */,
+				6089C33967AD3C25D49C43A6248BA99E /* PTHYScanner-umbrella.h */,
+				9D2966BDF77450DEBD6AF5A4C1ED03B9 /* PTHYScanner.debug.xcconfig */,
+				93A9435C796433C0EED0560F264EBCC8 /* PTHYScanner.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PTHYScanner";
+			sourceTree = "<group>";
+		};
+		372D584BE5EE583285924E3D7EA7FF27 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F8DBCA080FB0CFB624DF8F2E8EC6DBD7 /* LICENSE */,
+				96CA47ED2A8159FA4391F20094D067CF /* PTHYScanner.podspec */,
+				284A7E980362E1201E0441F8112ADEA9 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		495BCFF303B9E1858E276EF581DD312D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6571BAA2D0699A87C715A183D0533F4E /* Pods-PTHYScanner_Example */,
+				5A49D6E9F6E24236F0B72CD5413D7368 /* Pods-PTHYScanner_Tests */,
+				49F802CF0A6AC58278F3E5A346D7BC06 /* PTHYScanner */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7CC4217F933546F7DD8FFE9B4C1CAA1B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E11C2E16187FDD752C1E665B40B98B89 /* PTHYScanner */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8B86C806E4D4C006B41DB0C37057EED9 /* Pods-PTHYScanner_Example */ = {
+			isa = PBXGroup;
+			children = (
+				AA49C74B4D8619592BAE83BF4EABD58F /* Pods-PTHYScanner_Example.modulemap */,
+				2B4D147935100EE84FA404CCB0CBD36D /* Pods-PTHYScanner_Example-acknowledgements.markdown */,
+				F1C22892D5A91E5E6454239C9AEB8C02 /* Pods-PTHYScanner_Example-acknowledgements.plist */,
+				4D2DF0CF60467A1A8FC6C60C74A5319C /* Pods-PTHYScanner_Example-dummy.m */,
+				D6747AB4060302561E5361C0A5700B8B /* Pods-PTHYScanner_Example-frameworks.sh */,
+				35B6E0FF593E83FD48CDD6AB4F8CDFD9 /* Pods-PTHYScanner_Example-Info.plist */,
+				5F860B07F2BFF116BCAAEFF197A10471 /* Pods-PTHYScanner_Example-umbrella.h */,
+				857260E1AD43CAE982CC1B380DFCDF86 /* Pods-PTHYScanner_Example.debug.xcconfig */,
+				56B195E23C09281A6769E83EF4644AD8 /* Pods-PTHYScanner_Example.release.xcconfig */,
+			);
+			name = "Pods-PTHYScanner_Example";
+			path = "Target Support Files/Pods-PTHYScanner_Example";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				7CC4217F933546F7DD8FFE9B4C1CAA1B /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				495BCFF303B9E1858E276EF581DD312D /* Products */,
+				D1CB87C0685CE3269F6CE9ED22B853D4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D1CB87C0685CE3269F6CE9ED22B853D4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B86C806E4D4C006B41DB0C37057EED9 /* Pods-PTHYScanner_Example */,
+				EFB18A50E5939B6BD1A515A89D90BAE6 /* Pods-PTHYScanner_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E11C2E16187FDD752C1E665B40B98B89 /* PTHYScanner */ = {
+			isa = PBXGroup;
+			children = (
+				878E2BDB4AAAFB1C2768D9DB952AF12B /* ReplaceMe.swift */,
+				372D584BE5EE583285924E3D7EA7FF27 /* Pod */,
+				1C310D395A3B1EE98F9D35A3B10E7025 /* Support Files */,
+			);
+			name = PTHYScanner;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		EFB18A50E5939B6BD1A515A89D90BAE6 /* Pods-PTHYScanner_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6173ACA0047FB5CF671927C454138241 /* Pods-PTHYScanner_Tests.modulemap */,
+				4427206CE7A48C15EC0016E07369638D /* Pods-PTHYScanner_Tests-acknowledgements.markdown */,
+				9D7DB08B516E3ACCDD8CC6B6E3EA7342 /* Pods-PTHYScanner_Tests-acknowledgements.plist */,
+				DBC9F1018A212F0C8A44A11CEE8E78A3 /* Pods-PTHYScanner_Tests-dummy.m */,
+				F2D58D122A2D1B8DB5C31143EC8F8BA7 /* Pods-PTHYScanner_Tests-Info.plist */,
+				1DB44EE6C4450F0E07CDF7149686AB2B /* Pods-PTHYScanner_Tests-umbrella.h */,
+				9448E92D077C90E42E5CA5D5F281FADE /* Pods-PTHYScanner_Tests.debug.xcconfig */,
+				E87F58CBCFE3460F36E1ACC88670F7E9 /* Pods-PTHYScanner_Tests.release.xcconfig */,
+			);
+			name = "Pods-PTHYScanner_Tests";
+			path = "Target Support Files/Pods-PTHYScanner_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		57EA8BF101E63B39170F5A798B2DA172 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F24DDECBD3BB340EB4BE86E28B6BCA /* PTHYScanner-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ADB87F845F49DEFB56FF31CFD3A4B82 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B230F01F694836FBF25DDDE9F8B9667 /* Pods-PTHYScanner_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71433F961F57A6D2CBCAF62109D9474 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9926534F2CF6382398925D00650BDB /* Pods-PTHYScanner_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7B5CA508E41439AF361A77FB4D700FB8 /* Pods-PTHYScanner_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47981E02A4FF5F0F29ACC681D4652D4 /* Build configuration list for PBXNativeTarget "Pods-PTHYScanner_Tests" */;
+			buildPhases = (
+				9ADB87F845F49DEFB56FF31CFD3A4B82 /* Headers */,
+				BED1FDDFD756F2F12875A653857B4DE4 /* Sources */,
+				3EC40DBCCBD3FA6D1CA9002E80004E9F /* Frameworks */,
+				EF033610AFBD7EC1218593360A41CF01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6359E1E9E4982790774C55DF37F2DC8F /* PBXTargetDependency */,
+			);
+			name = "Pods-PTHYScanner_Tests";
+			productName = Pods_PTHYScanner_Tests;
+			productReference = 5A49D6E9F6E24236F0B72CD5413D7368 /* Pods-PTHYScanner_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+		8C8207B38E0F46A0677080F6C9472C17 /* PTHYScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B43102D852A55B41EE3713A6DDCB2239 /* Build configuration list for PBXNativeTarget "PTHYScanner" */;
+			buildPhases = (
+				57EA8BF101E63B39170F5A798B2DA172 /* Headers */,
+				465CFD14F7586924C37E2044D659CEBA /* Sources */,
+				CEF55CB01AC0BFBB918B9F3E52B80368 /* Frameworks */,
+				31D5523E31D69AB9C37B79F5A5C8349F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTHYScanner;
+			productName = PTHYScanner;
+			productReference = 49F802CF0A6AC58278F3E5A346D7BC06 /* PTHYScanner */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9E20EA84737FEB9459FAD7903B01FE6 /* Pods-PTHYScanner_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 201E7C7A7BE7D9EF783B632E7EB4A2F3 /* Build configuration list for PBXNativeTarget "Pods-PTHYScanner_Example" */;
+			buildPhases = (
+				A71433F961F57A6D2CBCAF62109D9474 /* Headers */,
+				47C7408FB40F5ADF506522A6FB4B786D /* Sources */,
+				8F8A428812B93DA96615AD8A11FF99C2 /* Frameworks */,
+				207E58751BF7F8A8A81366EF0E15D109 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6083D78D0C1F449771CBCE9287DE2BD4 /* PBXTargetDependency */,
+			);
+			name = "Pods-PTHYScanner_Example";
+			productName = Pods_PTHYScanner_Example;
+			productReference = 6571BAA2D0699A87C715A183D0533F4E /* Pods-PTHYScanner_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 495BCFF303B9E1858E276EF581DD312D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9E20EA84737FEB9459FAD7903B01FE6 /* Pods-PTHYScanner_Example */,
+				7B5CA508E41439AF361A77FB4D700FB8 /* Pods-PTHYScanner_Tests */,
+				8C8207B38E0F46A0677080F6C9472C17 /* PTHYScanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		207E58751BF7F8A8A81366EF0E15D109 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31D5523E31D69AB9C37B79F5A5C8349F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF033610AFBD7EC1218593360A41CF01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		465CFD14F7586924C37E2044D659CEBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E461F713257006D1D14822E4F360C7A /* PTHYScanner-dummy.m in Sources */,
+				833A40ECCB72249CBC05CF1072137070 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47C7408FB40F5ADF506522A6FB4B786D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20E60827B10653397FE67A6133D504D /* Pods-PTHYScanner_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BED1FDDFD756F2F12875A653857B4DE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				264097D4A1D9E6210C8C14DD5D3F70FC /* Pods-PTHYScanner_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6083D78D0C1F449771CBCE9287DE2BD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PTHYScanner;
+			target = 8C8207B38E0F46A0677080F6C9472C17 /* PTHYScanner */;
+			targetProxy = 0B72E11A76A148CD88C24A70BB44C721 /* PBXContainerItemProxy */;
+		};
+		6359E1E9E4982790774C55DF37F2DC8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PTHYScanner_Example";
+			target = B9E20EA84737FEB9459FAD7903B01FE6 /* Pods-PTHYScanner_Example */;
+			targetProxy = 939DB2BA6DBFEB103D251D58E87EADFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0206803116B56B09BEC16CFA0ABBC849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D2966BDF77450DEBD6AF5A4C1ED03B9 /* PTHYScanner.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PTHYScanner/PTHYScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PTHYScanner/PTHYScanner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PTHYScanner/PTHYScanner.modulemap";
+				PRODUCT_MODULE_NAME = PTHYScanner;
+				PRODUCT_NAME = PTHYScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A3DE6611298FE7059A24DC16B2F70185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 857260E1AD43CAE982CC1B380DFCDF86 /* Pods-PTHYScanner_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PTHYScanner_Example/Pods-PTHYScanner_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PTHYScanner_Example/Pods-PTHYScanner_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A8D759F9ECE1E232D773DF40ECF6EBD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9448E92D077C90E42E5CA5D5F281FADE /* Pods-PTHYScanner_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PTHYScanner_Tests/Pods-PTHYScanner_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PTHYScanner_Tests/Pods-PTHYScanner_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AD299A18181216DF4917272F2801E4B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A9435C796433C0EED0560F264EBCC8 /* PTHYScanner.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PTHYScanner/PTHYScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PTHYScanner/PTHYScanner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PTHYScanner/PTHYScanner.modulemap";
+				PRODUCT_MODULE_NAME = PTHYScanner;
+				PRODUCT_NAME = PTHYScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B573EE0FEF03C96996721ABAB57D10BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E87F58CBCFE3460F36E1ACC88670F7E9 /* Pods-PTHYScanner_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PTHYScanner_Tests/Pods-PTHYScanner_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PTHYScanner_Tests/Pods-PTHYScanner_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B648CF64668B2F26F972F7B938202E3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B195E23C09281A6769E83EF4644AD8 /* Pods-PTHYScanner_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PTHYScanner_Example/Pods-PTHYScanner_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PTHYScanner_Example/Pods-PTHYScanner_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		201E7C7A7BE7D9EF783B632E7EB4A2F3 /* Build configuration list for PBXNativeTarget "Pods-PTHYScanner_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DE6611298FE7059A24DC16B2F70185 /* Debug */,
+				B648CF64668B2F26F972F7B938202E3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B43102D852A55B41EE3713A6DDCB2239 /* Build configuration list for PBXNativeTarget "PTHYScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0206803116B56B09BEC16CFA0ABBC849 /* Debug */,
+				AD299A18181216DF4917272F2801E4B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47981E02A4FF5F0F29ACC681D4652D4 /* Build configuration list for PBXNativeTarget "Pods-PTHYScanner_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D759F9ECE1E232D773DF40ECF6EBD6 /* Debug */,
+				B573EE0FEF03C96996721ABAB57D10BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

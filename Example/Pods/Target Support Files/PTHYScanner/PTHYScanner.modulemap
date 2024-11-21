@@ -1,0 +1,6 @@
+framework module PTHYScanner {
+  umbrella header "PTHYScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - PTHYScanner (0.1.0)
+
+DEPENDENCIES:
+  - PTHYScanner (from `../`)
+
+EXTERNAL SOURCES:
+  PTHYScanner:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PTHYScanner: 45290654a9d69c592f472a153b66feeed5416d8f
+
+PODFILE CHECKSUM: 54874ffafbabef2c2d16a82454d93b32c2dbebd4
+
+COCOAPODS: 1.14.3

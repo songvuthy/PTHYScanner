@@ -1,0 +1,22 @@
+{
+  "name": "PTHYScanner",
+  "version": "0.1.0",
+  "summary": "A short description of PTHYScanner.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/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/PTHYScanner",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "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": "songvuthy93@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/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/PTHYScanner.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "PTHYScanner/Classes/**/*"
+}
