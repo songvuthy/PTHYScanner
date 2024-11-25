@@ -48,10 +48,8 @@ public class PTHYSannerView: UIView {
         contentView.clipsToBounds = true
         addSubview(contentView)
         
-        if PTHYConfig.showFrameImage {
-            addSubview(frameImageView)
-            frameImageView.frame = getRectFrameImageView
-        }
+        addSubview(frameImageView)
+        frameImageView.frame = getRectFrameImageView
         
         var rect:CGRect?
         switch PTHYConfig.scanAnimationStyle {

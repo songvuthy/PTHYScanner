@@ -141,14 +141,6 @@ public class PTHYSannerViewController: UIViewController {
         scanView.stopAnimation()
     }
     
-    private func checkMetadataObject(object: AVMetadataMachineReadableCodeObject){
-        // Convert to screen coordinates
-        if let transformedObject = videoPreviewLayer?.transformedMetadataObject(for: object) {
-            let qrCodeBounds = transformedObject.bounds
-            updateUI(rect: qrCodeBounds,code: object.stringValue ?? "")
-        }
-    }
-    
     private func updateUI(rect: CGRect, code: String){
         view.addSubview(qrImageView)
         scanView.alpha = 0
@@ -157,18 +149,15 @@ public class PTHYSannerViewController: UIViewController {
         
         qrImageView.frame = scanView.getRectFrameImageView
         qrImageView.image = PTHYConfig.frameImage
-       
         UIView.animate(withDuration: 0.25) {
-            
             self.qrImageView.frame = rect
             
         }completion: { _ in
-            
             self.qrImageView.image = PTHYSannerCommon.generateQrCode(string: code)
-            self.delegate?.didBegin(code)
             
             UIView.animate(withDuration: 0.25, delay: 0.25) {
                 self.qrImageView.frame = self.getRectOfContentView
+                
             }completion: { _ in
                 self.overlayCurrencyImageView.alpha = 1
                 self.qrImageView.addSubViewToCenter(overlayImageView:self.overlayCurrencyImageView)
@@ -227,10 +216,21 @@ extension PTHYSannerViewController:AVCaptureMetadataOutputObjectsDelegate{
     
     public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
-        guard let object = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
+        guard let object = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
+              let code = object.stringValue else {
             return
         }
         stopScanning()
-        checkMetadataObject(object: object)
+        delegate?.didBegin(code)
+        
+        if PTHYConfig.showQrCodeImage {
+            // Convert to screen coordinates
+            if let transformedObject = videoPreviewLayer?.transformedMetadataObject(for: object) {
+                let qrCodeBounds = transformedObject.bounds
+                updateUI(rect: qrCodeBounds,code: code)
+            }
+            return
+        }
+        delegate?.didOutput(code,overlayCurrencyImageView)
     }
 }

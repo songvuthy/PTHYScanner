@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         PTHYConfig.backgroundColor = .black
         PTHYConfig.scanAnimationStyle = .line
+        PTHYConfig.showQrCodeImage = true
         cameraViewController.delegate = self
         add(cameraViewController)
     }

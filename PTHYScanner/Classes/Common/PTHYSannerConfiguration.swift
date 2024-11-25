@@ -13,7 +13,6 @@ public var PTHYConfig: PTHYSannerConfiguration { return PTHYSannerConfiguration.
 open class PTHYSannerConfiguration {
     public static let shared: PTHYSannerConfiguration = PTHYSannerConfiguration()
     
-    
     // configuration specific settings
     open var scanAnimationStyle:PTHYSannerCommon.ScanAnimationStyle = .line
     
@@ -31,9 +30,9 @@ open class PTHYSannerConfiguration {
     
     open var frameBorderWidth:CGFloat = 4
     
-    open var showFrameImage:Bool = true
-    
     open var scanAdjustCenterY:CGFloat = 0.0
+    
+    open var showQrCodeImage:Bool = true
     
     open var qrCodeAdjustCenterY:CGFloat = 0.0
 }
