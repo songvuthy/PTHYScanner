@@ -9,14 +9,15 @@ import UIKit
 import AVFoundation
 
 public protocol PTHYSannerViewControllerDelegate: AnyObject {
-    func didOutput(_ code:String)
+    func didBegin(_ code:String)
+    func didOutput(_ code:String,_ overlayImageView: UIImageView)
     func didReceiveError(_ error: String)
     
 }
 public class PTHYSannerViewController: UIViewController {
     public weak var delegate:PTHYSannerViewControllerDelegate?
         
-    private lazy var scanView = PTHYSannerView(frame: CGRect(x: 0, y: 0 - PTHYConfig.adjustmentY, width: PTHYSannerCommon.screenWidth, height: PTHYSannerCommon.screenHeight))
+    private lazy var scanView = PTHYSannerView(frame: CGRect(x: 0, y: 0, width: PTHYSannerCommon.screenWidth, height: PTHYSannerCommon.screenHeight))
     /// Capture session.
     private lazy var captureSession = AVCaptureSession()
     public override func viewDidLoad() {
@@ -98,7 +99,7 @@ public class PTHYSannerViewController: UIViewController {
         if (captureSession.canAddOutput(metadataOutput)) {
             captureSession.addOutput(metadataOutput)
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.qr]
+            metadataOutput.metadataObjectTypes = PTHYConfig.metadata
         } else {
             delegate?.didReceiveError("Your device does not support scanning a code from an item. Please use a device with a camera.")
             return
@@ -131,6 +132,7 @@ public class PTHYSannerViewController: UIViewController {
     
     
     public func startScanning() {
+        resetUI()
         startCapturing()
         scanView.startAnimation()
     }
@@ -139,10 +141,58 @@ public class PTHYSannerViewController: UIViewController {
         scanView.stopAnimation()
     }
     
+    private func checkMetadataObject(object: AVMetadataMachineReadableCodeObject){
+        // Convert to screen coordinates
+        if let transformedObject = videoPreviewLayer?.transformedMetadataObject(for: object) {
+            let qrCodeBounds = transformedObject.bounds
+            updateUI(rect: qrCodeBounds,code: object.stringValue ?? "")
+        }
+    }
+    
+    private func updateUI(rect: CGRect, code: String){
+        view.addSubview(qrImageView)
+        scanView.alpha = 0
+        overlayCurrencyImageView.alpha = 0
+        qrImageView.alpha = 1
+        
+        qrImageView.frame = scanView.getRectFrameImageView
+        qrImageView.image = PTHYConfig.frameImage
+       
+        UIView.animate(withDuration: 0.25) {
+            
+            self.qrImageView.frame = rect
+            
+        }completion: { _ in
+            
+            self.qrImageView.image = PTHYSannerCommon.generateQrCode(string: code)
+            self.delegate?.didBegin(code)
+            
+            UIView.animate(withDuration: 0.25, delay: 0.25) {
+                self.qrImageView.frame = self.getRectOfContentView
+            }completion: { _ in
+                self.overlayCurrencyImageView.alpha = 1
+                self.qrImageView.addSubViewToCenter(overlayImageView:self.overlayCurrencyImageView)
+                self.delegate?.didOutput(code,self.overlayCurrencyImageView)
+            }
+        }
+    }
+    
+    private func resetUI(){
+        UIView.animate(withDuration: 0.25) {
+            self.overlayCurrencyImageView.alpha = 0
+            self.qrImageView.alpha = 0
+            self.scanView.alpha = 1
+        }completion: { _ in
+            self.overlayCurrencyImageView.removeFromSuperview()
+            self.qrImageView.removeFromSuperview()
+        }
+    }
+    
     private var getRectOfContentView: CGRect{
-        var contentViewRect = scanView.contentView.frame
-        contentViewRect.origin.y -= PTHYConfig.adjustmentY
-        return contentViewRect
+        let contentViewRect = scanView.contentView.frame
+        let origin = CGPoint(x: contentViewRect.origin.x, y: contentViewRect.origin.y - PTHYConfig.qrCodeAdjustCenterY)
+        let size = CGSize(width: contentViewRect.width, height: contentViewRect.height)
+        return CGRect(origin: origin, size: size)
     }
     
     private func convertRectOfInterest(rect: CGRect) -> CGRect {
@@ -160,6 +210,17 @@ public class PTHYSannerViewController: UIViewController {
         )
         return rectOfInterest
     }
+    
+    private lazy var qrImageView: UIImageView = {
+        let view = UIImageView()
+        
+        return view
+    }()
+    private lazy var overlayCurrencyImageView: UIImageView = {
+        let view = UIImageView()
+        return view
+    }()
+    
 }
 // MARK: - AVCaptureMetadataOutputObjectsDelegate
 extension PTHYSannerViewController:AVCaptureMetadataOutputObjectsDelegate{
@@ -169,24 +230,7 @@ extension PTHYSannerViewController:AVCaptureMetadataOutputObjectsDelegate{
         guard let object = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
             return
         }
-//        // Convert to screen coordinates
-//        if let transformedObject = videoPreviewLayer?.transformedMetadataObject(for: object) {
-//            let qrCodeBounds = transformedObject.bounds
-//            view.addSubview(frameView)
-//            frameView.frame = getRectOfContentView
-//            UIView.animate(withDuration: 0.25) {[self] in
-//                titleScanView.alpha = 0
-//                actionView.alpha = 0
-//                scanView.alpha = 0
-//        
-//                frameView.alpha = 1
-//                frameView.frame = qrCodeBounds
-//            }completion: {[self] _ in
-//                delegate?.didOutput(object.stringValue ?? "")
-//                Vibration.medium.vibrate()
-//                isOutputted = true
-//            }
-//        }
-        delegate?.didOutput(object.stringValue ?? "")
+        stopScanning()
+        checkMetadataObject(object: object)
     }
 }

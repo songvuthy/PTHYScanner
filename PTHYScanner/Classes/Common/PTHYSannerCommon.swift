@@ -17,16 +17,27 @@ public class PTHYSannerCommon {
 
     public static let statusHeight = UIApplication.shared.statusBarFrame.height
     
-    public static func ImageResourcePath(_ name:String)-> UIImage{
+    public static func imageResourcePath(_ name:String)-> UIImage{
         guard let image = UIImage(named: name, in: bundle, compatibleWith: nil) else{
             return UIImage()
         }
         return image
     }
-
+    
+    public static func generateQrCode(string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.ascii, allowLossyConversion: false)
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        filter?.setValue(data, forKey: "inputMessage")
+        filter?.setValue("Q", forKey: "inputCorrectionLevel")
+        if let qrCodeImage = (filter?.outputImage) {
+            return UIImage(ciImage:qrCodeImage.transformed(by: CGAffineTransform(scaleX: 10, y: 10)))
+        }
+        return nil
+    }
     public enum ScanAnimationStyle {
-        case `default`
+        case line
         case grid
+        case none
     }
 }
 

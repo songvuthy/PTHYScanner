@@ -5,30 +5,35 @@
 //  Created by Song Vuthy on 22/11/24.
 //
 
-import Foundation
+import AVFoundation
 
 /// Typealias for code prettiness
 public var PTHYConfig: PTHYSannerConfiguration { return PTHYSannerConfiguration.shared }
 
-public class PTHYSannerConfiguration {
-    public static var shared: PTHYSannerConfiguration = PTHYSannerConfiguration()
+open class PTHYSannerConfiguration {
+    public static let shared: PTHYSannerConfiguration = PTHYSannerConfiguration()
+    
     
     // configuration specific settings
-    public var scanAnimationStyle:PTHYSannerCommon.ScanAnimationStyle = .default
+    open var scanAnimationStyle:PTHYSannerCommon.ScanAnimationStyle = .line
     
-    public var borderColor: UIColor = .white
+    open var metadata:[AVMetadataObject.ObjectType] = AVMetadataObject.ObjectType.metadata
+
+    open var cornerColor:UIColor = .white
     
-    public var borderLineWidth:CGFloat = 1
+    open var backgroundColor:UIColor = .black
     
-    public var cornerColor:UIColor = .white
+    open var backgroundAlpha:CGFloat = 0.6
     
-    public var backgroundAlpha:CGFloat = 0.6
+    open var scanBorderWidthRadio:CGFloat = 0.6
     
-    public var scanBorderWidthRadio:CGFloat = 0.6
+    open var frameImage:UIImage = PTHYSannerCommon.imageResourcePath("icon_scan_frame")
     
-    public var frameImage:UIImage = PTHYSannerCommon.ImageResourcePath("icon_scan_frame")
+    open var frameBorderWidth:CGFloat = 4
     
-    public var showFrameImage:Bool = true
+    open var showFrameImage:Bool = true
     
-    public var adjustmentY:CGFloat = 0.0
+    open var scanAdjustCenterY:CGFloat = 0.0
+    
+    open var qrCodeAdjustCenterY:CGFloat = 0.0
 }
