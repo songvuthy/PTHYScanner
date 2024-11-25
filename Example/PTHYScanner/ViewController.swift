@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import PTHYScanner
 
 class ViewController: UIViewController {
-    
+    private lazy var cameraViewController: PTHYSannerViewController = .init()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        PTHYConfig.cornerColor = .red
+        cameraViewController.delegate = self
+        add(cameraViewController)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        cameraViewController.startScanning()
     }
 
+}
+extension ViewController: PTHYSannerViewControllerDelegate {
+    
+    func didOutput(_ code: String) {
+        print("output: ==>",code)
+    }
+    
+    func didReceiveError(_ error: String) {
+        print("error: ==>",error)
+    }
 }
 

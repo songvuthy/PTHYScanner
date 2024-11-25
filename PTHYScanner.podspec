@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PTHYScanner'
   s.version          = '0.0.1'
-  s.swift_versions   = "5.0"
+  s.swift_versions   = "4.0"
   s.summary          = 'A customizable QR code scanner for iOS.'
   s.description      = <<-DESC
   PTHYScanner provides a simple API for real-time QR code scanning in iOS apps.
@@ -23,12 +23,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
 
   s.source_files = 'PTHYScanner/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'PTHYScanner' => ['PTHYScanner/Assets/*.png']
-  # }
+  s.resources    = "PTHYScanner/Assets/**/*.xcassets"
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks   = 'UIKit', 'AVFoundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
