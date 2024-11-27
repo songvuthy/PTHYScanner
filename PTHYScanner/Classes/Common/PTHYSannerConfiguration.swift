@@ -26,13 +26,13 @@ open class PTHYSannerConfiguration {
     
     open var scanBorderWidthRadio:CGFloat = 0.6
     
+    open var scanAdjustCenterY:CGFloat = 0.0
+    
     open var frameImage:UIImage = PTHYSannerCommon.imageResourcePath("icon_scan_frame")
     
     open var frameBorderWidth:CGFloat = 4
     
-    open var scanAdjustCenterY:CGFloat = 0.0
-    
-    open var showQrCodeImage:Bool = true
+    open var showQrCodeScanned:Bool = true
     
     open var qrCodeAdjustCenterY:CGFloat = 0.0
 }

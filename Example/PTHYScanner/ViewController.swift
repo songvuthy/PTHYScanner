@@ -11,12 +11,12 @@ import PTHYScanner
 
 class ViewController: UIViewController {
     private var cameraViewController: PTHYSannerViewController = .init()
-    var isOutputted = false
+    private var isOutputted = false
     override func viewDidLoad() {
         super.viewDidLoad()
         PTHYConfig.backgroundColor = .black
         PTHYConfig.scanAnimationStyle = .line
-        PTHYConfig.showQrCodeImage = true
+        PTHYConfig.showQrCodeScanned = true
         cameraViewController.delegate = self
         add(cameraViewController)
     }
@@ -61,7 +61,7 @@ extension ViewController: PTHYSannerViewControllerDelegate {
         overlayImageView.image = UIImage(named: "ic_symbol_currency_dollar")
         print("output: ==>",code)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             self.startScanning()
         })
     }

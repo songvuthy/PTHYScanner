@@ -223,7 +223,7 @@ extension PTHYSannerViewController:AVCaptureMetadataOutputObjectsDelegate{
         stopScanning()
         delegate?.didBegin(code)
         
-        if PTHYConfig.showQrCodeImage {
+        if PTHYConfig.showQrCodeScanned {
             // Convert to screen coordinates
             if let transformedObject = videoPreviewLayer?.transformedMetadataObject(for: object) {
                 let qrCodeBounds = transformedObject.bounds

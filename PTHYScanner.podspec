@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   PTHYScanner provides a simple API for real-time QR code scanning in iOS apps.
                        DESC
 
-  s.homepage         = 'https://github.com/songvuthy/PTHYScanner.git'
+  s.homepage         = 'https://github.com/songvuthy/PTHYScanner'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Song Vuthy' => 'songvuthy93@gmail.com' }
   s.source           = { :git => 'https://github.com/songvuthy/PTHYScanner.git', :tag => s.version.to_s }
