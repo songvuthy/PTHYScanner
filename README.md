@@ -156,7 +156,11 @@ Needs to change before scan.
     
     PTHYConfig.showQrCodeScanned = true
     
-    PTHYConfig.qrCodeAdjustCenterY = 0.0
+    PTHYConfig.qrCodeScannedAdjustCenterY = 0.0
+    
+    PTHYConfig.customHeaderView = headerView
+        
+    PTHYConfig.customFooterView = footerView
 ```
 
 ## Author
