@@ -10,13 +10,16 @@ import UIKit
 import PTHYScanner
 
 class ViewController: UIViewController {
-    private var cameraViewController: PTHYSannerViewController = .init()
+    private var cameraViewController: PTHYSannerViewController!
     private var isOutputted = false
     override func viewDidLoad() {
         super.viewDidLoad()
         PTHYConfig.backgroundColor = .black
         PTHYConfig.scanAnimationStyle = .line
         PTHYConfig.showQrCodeScanned = true
+        PTHYConfig.customHeaderView = headerView
+        PTHYConfig.customFooterView = footerView
+        cameraViewController = PTHYSannerViewController()
         cameraViewController.delegate = self
         add(cameraViewController)
     }
@@ -49,6 +52,18 @@ class ViewController: UIViewController {
     private func stopScanning() {
         cameraViewController.stopScanning()
     }
+    
+    lazy var headerView: CustomLayoutView = {
+        let view = CustomLayoutView()
+        view.titleLabel.text = "Scan QR"
+        return view
+    }()
+    lazy var footerView: CustomLayoutView = {
+        let view = CustomLayoutView()
+        view.titleLabel.text = "A fast, lightweight, and customizable QR code scanner for iOS, providing seamless QR code detection and decoding."
+        view.titleLabel.font = .systemFont(ofSize: 16)
+        return view
+    }()
 }
 extension ViewController: PTHYSannerViewControllerDelegate {
     
@@ -69,4 +84,31 @@ extension ViewController: PTHYSannerViewControllerDelegate {
     func didReceiveError(_ error: String) {
         print("error: ==>",error)
     }
+}
+
+
+class CustomLayoutView: UIView {
+    let titleLabel = UILabel()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubview(titleLabel)
+        titleLabel.text = "Scan QR"
+        titleLabel.textAlignment = .center
+        titleLabel.font = .boldSystemFont(ofSize: 24)
+        titleLabel.textColor = .white
+        titleLabel.numberOfLines = 0
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 32).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: leftAnchor,constant: 32).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: rightAnchor,constant: -32).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -32).isActive = true
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
 }

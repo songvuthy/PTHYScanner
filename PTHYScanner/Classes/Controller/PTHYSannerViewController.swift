@@ -72,9 +72,11 @@ public class PTHYSannerViewController: UIViewController {
         view.addSubview(scanView)
     
         setupAVCaptureSession()
+        setupHeaderView()
+        setupFooterView()
         
     }
-    
+    //MARK: -
     private func setupAVCaptureSession() {
         
         captureSession = AVCaptureSession()
@@ -93,9 +95,10 @@ public class PTHYSannerViewController: UIViewController {
             return
         }
         let metadataOutput = AVCaptureMetadataOutput()
-        
-//        metadataOutput.rectOfInterest = convertRectOfInterest(rect: getRectOfContentView)
-        
+        if !PTHYConfig.isScanningFullScreen {
+            metadataOutput.rectOfInterest = convertRectOfInterest(rect: getRectOfContentView)
+        }
+
         if (captureSession.canAddOutput(metadataOutput)) {
             captureSession.addOutput(metadataOutput)
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
@@ -155,7 +158,7 @@ public class PTHYSannerViewController: UIViewController {
         }completion: { _ in
             self.qrImageView.image = PTHYSannerCommon.generateQrCode(string: code)
             
-            UIView.animate(withDuration: 0.25, delay: 0.25) {
+            UIView.animate(withDuration: 0.25, delay: 1) {
                 self.qrImageView.frame = self.getRectOfContentView
                 
             }completion: { _ in
@@ -177,9 +180,9 @@ public class PTHYSannerViewController: UIViewController {
         }
     }
     
-    private var getRectOfContentView: CGRect{
+    public var getRectOfContentView: CGRect{
         let contentViewRect = scanView.contentView.frame
-        let origin = CGPoint(x: contentViewRect.origin.x, y: contentViewRect.origin.y - PTHYConfig.qrCodeAdjustCenterY)
+        let origin = CGPoint(x: contentViewRect.origin.x, y: contentViewRect.origin.y - PTHYConfig.qrCodeScannedAdjustCenterY)
         let size = CGSize(width: contentViewRect.width, height: contentViewRect.height)
         return CGRect(origin: origin, size: size)
     }
@@ -199,6 +202,29 @@ public class PTHYSannerViewController: UIViewController {
         )
         return rectOfInterest
     }
+    //MARK: -
+    
+    private func setupHeaderView(){
+        view.addSubview(customHeaderView)
+        customHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        customHeaderView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        customHeaderView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+    }
+    private func setupFooterView(){
+        view.addSubview(customFooterView)
+        customFooterView.translatesAutoresizingMaskIntoConstraints = false
+        customFooterView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        customFooterView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        customHeaderView.topAnchor.constraint(equalTo: view.topAnchor,constant: getRectOfContentView.origin.y - customHeaderView.frame.height - PTHYConfig.frameBorderWidth).isActive = true
+        
+        customFooterView.topAnchor.constraint(equalTo: view.topAnchor,constant: getRectOfContentView.origin.y + getRectOfContentView.height + PTHYConfig.frameBorderWidth).isActive = true
+    }
+    
+    //MARK: -
     
     private lazy var qrImageView: UIImageView = {
         let view = UIImageView()
@@ -209,6 +235,8 @@ public class PTHYSannerViewController: UIViewController {
         let view = UIImageView()
         return view
     }()
+    private var customHeaderView: UIView = PTHYConfig.customHeaderView
+    private var customFooterView: UIView = PTHYConfig.customFooterView
     
 }
 // MARK: - AVCaptureMetadataOutputObjectsDelegate

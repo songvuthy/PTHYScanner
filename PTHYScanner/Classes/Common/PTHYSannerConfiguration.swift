@@ -32,7 +32,13 @@ open class PTHYSannerConfiguration {
     
     open var frameBorderWidth:CGFloat = 4
     
+    open var isScanningFullScreen:Bool = true
+    
     open var showQrCodeScanned:Bool = true
     
-    open var qrCodeAdjustCenterY:CGFloat = 0.0
+    open var qrCodeScannedAdjustCenterY:CGFloat = 0.0
+    
+    open var customHeaderView: UIView = UIView()
+    
+    open var customFooterView: UIView = UIView()
 }
