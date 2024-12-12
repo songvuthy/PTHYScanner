@@ -144,7 +144,7 @@ public class PTHYSannerViewController: UIViewController {
         scanView.stopAnimation()
     }
     
-    private func updateUI(rect: CGRect, code: String){
+    private func scannedUpdateUI(rect: CGRect, code: String){
         view.addSubview(qrImageView)
         scanView.alpha = 0
         overlayCurrencyImageView.alpha = 0
@@ -238,6 +238,9 @@ public class PTHYSannerViewController: UIViewController {
     private var customHeaderView: UIView = PTHYConfig.customHeaderView
     private var customFooterView: UIView = PTHYConfig.customFooterView
     
+    public enum ErrorState {
+    case error
+    }
 }
 // MARK: - AVCaptureMetadataOutputObjectsDelegate
 extension PTHYSannerViewController:AVCaptureMetadataOutputObjectsDelegate{
@@ -255,7 +258,7 @@ extension PTHYSannerViewController:AVCaptureMetadataOutputObjectsDelegate{
             // Convert to screen coordinates
             if let transformedObject = videoPreviewLayer?.transformedMetadataObject(for: object) {
                 let qrCodeBounds = transformedObject.bounds
-                updateUI(rect: qrCodeBounds,code: code)
+                scannedUpdateUI(rect: qrCodeBounds,code: code)
             }
             return
         }
