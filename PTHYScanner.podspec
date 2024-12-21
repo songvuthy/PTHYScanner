@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PTHYScanner'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.swift_versions   = "4.0"
   s.summary          = 'A customizable QR code scanner for iOS.'
   s.description      = <<-DESC
