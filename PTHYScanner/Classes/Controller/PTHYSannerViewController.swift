@@ -11,7 +11,7 @@ import AVFoundation
 public protocol PTHYSannerViewControllerDelegate: AnyObject {
     func didBegin(_ code:String)
     func didOutput(_ code:String,_ overlayImageView: UIImageView)
-    func didReceiveError(_ error: String)
+    func didReceiveError(_ failure: PTHYSannerViewController.ErrorState)
     
 }
 public class PTHYSannerViewController: UIViewController {
@@ -85,13 +85,13 @@ public class PTHYSannerViewController: UIViewController {
         do {
             videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
-            delegate?.didReceiveError(error.localizedDescription)
+            delegate?.didReceiveError(.cameraNoPermission)
             return
         }
         if (captureSession.canAddInput(videoInput)) {
             captureSession.addInput(videoInput)
         } else {
-            delegate?.didReceiveError("Your device does not support scanning a code from an item. Please use a device with a camera.")
+            delegate?.didReceiveError(.failed(error: "Your device does not support scanning a code from an item. Please use a device with a camera."))
             return
         }
         let metadataOutput = AVCaptureMetadataOutput()
@@ -104,7 +104,7 @@ public class PTHYSannerViewController: UIViewController {
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             metadataOutput.metadataObjectTypes = PTHYConfig.metadata
         } else {
-            delegate?.didReceiveError("Your device does not support scanning a code from an item. Please use a device with a camera.")
+            delegate?.didReceiveError(.failed(error: "Your device does not support scanning a code from an item. Please use a device with a camera."))
             return
         }
         
@@ -158,7 +158,7 @@ public class PTHYSannerViewController: UIViewController {
         }completion: { _ in
             self.qrImageView.image = PTHYSannerCommon.generateQrCode(string: code)
             
-            UIView.animate(withDuration: 0.25, delay: 1) {
+            UIView.animate(withDuration: 0.25, delay: 0.25) {
                 self.qrImageView.frame = self.getRectOfContentView
                 
             }completion: { _ in
@@ -239,7 +239,8 @@ public class PTHYSannerViewController: UIViewController {
     private var customFooterView: UIView = PTHYConfig.customFooterView
     
     public enum ErrorState {
-    case error
+        case failed(error: String)
+        case cameraNoPermission
     }
 }
 // MARK: - AVCaptureMetadataOutputObjectsDelegate
