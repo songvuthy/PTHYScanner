@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         PTHYConfig.backgroundColor = .black
         PTHYConfig.scanAnimationStyle = .line
         PTHYConfig.showQrCodeScanned = true
+        PTHYConfig.isScanningFullScreen = false
         PTHYConfig.customHeaderView = headerView
         PTHYConfig.customFooterView = footerView
         cameraViewController = PTHYSannerViewController()
@@ -68,6 +69,27 @@ class ViewController: UIViewController {
     private func stopScanning() {
         cameraViewController.stopScanning()
     }
+    private func alertCameraPermission() {
+        let appName = (Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String) ?? ""
+        // Create Alert
+        let alert = UIAlertController(
+            title: "This feature requires camera access",
+            message: "Open iPhone Settings, tab \(appName) and turn on Camera.",
+            preferredStyle: .alert
+        )
+        // Add "Cancel" Button to alert, pressing it will pop back view controller
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [self] _ in
+            navigationController?.popViewController(animated: true)
+        }))
+        // Add "Setting" Button to alert, pressing it will bring you to the settings app
+        alert.addAction(UIAlertAction(title: "Settings", style: .default, handler: { _ in
+            if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.open(settingsURL)
+            }
+        }))
+        // Show the alert with animation
+        self.present(alert, animated: true)
+    }
     
     lazy var headerView: CustomLayoutView = {
         let view = CustomLayoutView()
@@ -97,9 +119,20 @@ extension ViewController: PTHYSannerViewControllerDelegate {
         })
     }
     
-    func didReceiveError(_ error: String) {
-        print("error: ==>",error)
+    func didReceiveError(_ failure: PTHYScanner.PTHYSannerViewController.ErrorState) {
+        switch failure {
+        case .failed(let error):
+            print("failed: ==>",error)
+            
+        case .cameraNoPermission:
+            DispatchQueue.main.async { [self] in
+                alertCameraPermission()
+                print("failed camera no permission")
+            }
+
+        }
     }
+    
 }
 
 
@@ -126,8 +159,10 @@ class CustomLayoutView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
 }
+ 
+    
+
 
 ```
 
